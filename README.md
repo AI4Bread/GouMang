@@ -3,10 +3,10 @@
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/AI4Bread/.github/main/goumang_logoall.png" width="600"/>
+<img src="https://github.com/AI4Bread/GouMang/blob/main/assets/goumang_logoallnew.png?raw=true" width="600"/>
   <div>&nbsp;</div>
   <div align="center">
-    <b><font size="5">XiXiLM</font></b>
+<!--     <b><font size="5">XiXiLM</font></b> -->
     <sup>
       <a href="http://www.ai4bread.com">
       </a>
