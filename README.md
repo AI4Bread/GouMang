@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<!-- <img src="https://github.com/AI4Bread/GouMang/blob/main/assets/goumang_logoallnew.png?raw=true" width="200"/> -->
+<img src="https://github.com/AI4Bread/GouMang/blob/main/assets/goumang_logoallnew.png?raw=true" width="200"/>
   <div>&nbsp;</div>
   <div align="center">
     <!-- <b><font size="5">XiXiLM</font></b> -->
