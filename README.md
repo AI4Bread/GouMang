@@ -1,12 +1,11 @@
-
 # XiXiLM 
 
 <div align="center">
 
-<img src="https://github.com/AI4Bread/GouMang/blob/main/assets/goumang_logoallnew.png?raw=true" width="600"/>
+<!-- <img src="https://github.com/AI4Bread/GouMang/blob/main/assets/goumang_logoallnew.png?raw=true" width="200"/> -->
   <div>&nbsp;</div>
   <div align="center">
-<!--     <b><font size="5">XiXiLM</font></b> -->
+    <!-- <b><font size="5">XiXiLM</font></b> -->
     <sup>
       <a href="http://www.ai4bread.com">
       </a>
@@ -29,9 +28,17 @@
 
 XiXiLM（GouMang LLM） has open-sourced a 7 billion parameter base model and a chat model tailored for agricultural scenarios. The model has the following characteristics:
 
-- **200K Context window**: Nearly perfect at finding needles in the haystack with 200K-long context, with leading performance on long-context tasks like LongBench and L-Eval. Try it with [LMDeploy](https://github.com/InternLM/lmdeploy) for 200K-context inference.
+1. **High Professionalism**: XiXiLM focuses on the agricultural field, providing professional and accurate answers especially in areas such as tuber crop cultivation, pest and disease control, and soil management.
 
-- **Outstanding comprehensive performance**: Significantly better than the last generation in all dimensions, especially in reasoning, math, code, chat experience, instruction following, and creative writing, with leading performance among open-source models in similar sizes. In some evaluations, InternLM2-Chat-20B may match or even surpass ChatGPT (GPT-3.5).
+2. **Academic Support**: The model is based on the latest agricultural research findings, capable of providing academic-level answers to help researchers and agricultural practitioners gain a deeper understanding of agricultural issues.
+
+3. **Multilingual Support**: Supports both Chinese and English languages, making it convenient for users both domestically and internationally.
+
+4. **Free Commercial Use**: The model weights are fully open, supporting not only academic research but also allowing **free** commercial usage. Users can use the model in commercial projects for free, lowering the usage threshold.
+
+5. **Efficient Training**: Employs advanced training algorithms and techniques, enabling the model to respond quickly to user inquiries and provide efficient Q&A services.
+
+6. **Continuous Optimization**: The model will be continuously optimized based on user feedback and the latest research findings, constantly improving the quality and coverage of its answers.
 
 ## XiXiLM-Qwen-14B
 
@@ -249,7 +256,7 @@ Once the model is loaded, you can start conversing with GouMang like this.
 
 ## Open Source License
 
-The code is licensed under Apache-2.0, while model weights are fully open for academic research and also allow **free** commercial usage. To apply for a commercial license, please fill in the [申请表（中文）](https://wj.qq.com/s2/14897739/e871/). For other questions or collaborations, please contact <laiyifu@xjtu.edu.cn>.
+The code is licensed under Apache-2.0, while model weights are fully open for academic research and also allow **free** commercial usage. To apply for a commercial license, please fill in the <a href="https://wj.qq.com/s2/14897739/e871/" target="_blank">申请表（中文）</a>. For other questions or collaborations, please contact <laiyifu@xjtu.edu.cn>.
 
 ## Citation
 
@@ -259,8 +266,18 @@ The code is licensed under Apache-2.0, while model weights are fully open for ac
 
 XiXiLM ，即西西大模型（又名：句芒大模型），开源了面向农业问答的大模型。模型具有以下特点：
 
-- 有效支持20万字超长上下文：模型在20万字长输入中几乎完美地实现长文“大海捞针”，而且在 LongBench 和 L-Eval 等长文任务中的表现也达到开源模型中的领先水平。 可以通过 [LMDeploy](https://github.com/InternLM/lmdeploy) 尝试20万字超长上下文推理。
-- 综合性能全面提升：各能力维度相比上一代模型全面进步，在推理、数学、代码、对话体验、指令遵循和创意写作等方面的能力提升尤为显著，综合性能达到同量级开源模型的领先水平，在重点能力评测上 InternLM2-Chat-20B 能比肩甚至超越 ChatGPT （GPT-3.5）。
+1. **专业性强**：XiXiLM 专注于农业领域，特别是薯类作物的种植、病虫害防治、土壤管理等方面，提供专业、精准的解答。
+
+2. **学术化支持**：模型基于最新的农业研究成果，能够提供学术化的回答，帮助研究人员和农业从业者深入理解农业问题。
+
+3. **多语言支持**：支持中文和英文两种语言，方便国内外用户使用。
+
+4. **免费商业使用**：模型权重完全开放，不仅支持学术研究，还允许**申请**商业使用。用户可以在商业项目中免费使用该模型，降低了使用门槛。
+
+5. **高效训练**：采用先进的训练算法和技术，使得模型能够快速响应用户提问，提供高效的问答服务。
+
+6. **持续优化**：模型会根据用户反馈和最新研究成果进行持续优化，不断提升问答质量和覆盖面。
+
 
 ## XiXiLM-Qwen-14B
 
@@ -413,6 +430,6 @@ streamlit run /root/personal_assistant/code/InternLM/web_demo.py --server.addres
 
 ## 开源许可证
 
-本仓库的代码依照 Apache-2.0 协议开源。模型权重对学术研究完全开放，也可申请免费的商业使用授权（[申请表](https://wj.qq.com/s2/14897739/e871/)）。其他问题与合作请联系 <laiyifu@xjtu.edu.cn>。
+本仓库的代码依照 Apache-2.0 协议开源。模型权重对学术研究完全开放，也可申请免费的商业使用授权（<a href="https://wj.qq.com/s2/14897739/e871/" target="_blank">申请表（中文）</a>）。其他问题与合作请联系 <laiyifu@xjtu.edu.cn>。
 
 ## 引用
