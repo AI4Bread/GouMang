@@ -237,13 +237,18 @@ pip install streamlit==1.24.0
 
 Download the [GouMang](https://huggingface.co/AI4Bread/GouMang) project model (please Star if you like it)
 
+```bash
+git clone https://github.com/AI4Bread/GouMang.git
+cd GouMang
+```
+
 
 Replace the model path in `web_demo.py` with the path where the downloaded parameters of `GouMang` are stored 
 
 Run the `web_demo.py` file in the directory, and after entering the following command, [**check this tutorial 5.2 for local port configuration**](https://github.com/InternLM/tutorial/blob/main/helloworld/hello_world.md#52-%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E7%AB%AF%E5%8F%A3)，to map the port to your local machine. Enter `http://127.0.0.1:6006` in your local browser. 
 
 ```
-streamlit run /root/personal_assistant/code/InternLM/web_demo.py --server.address 127.0.0.1 --server.port 6006
+streamlit run web_demo.py --server.address 127.0.0.1 --server.port 6006
 ```
 
 Note: The model will load only after you open the `http://127.0.0.1:6006` page in your browser. 
