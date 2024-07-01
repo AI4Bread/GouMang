@@ -466,6 +466,11 @@ lmdeploy serve gradio ./workspace
 
 下载 [GouMang](https://huggingface.co/AI4Bread/GouMang) 项目模型（如果喜欢请给个 Star）
 
+```bash
+git clone https://github.com/AI4Bread/GouMang.git
+cd GouMang
+```
+
 将 `web_demo.py` 中的模型路径替换为下载的 `GouMang` 参数存储路径
 
 在目录中运行 `web_demo.py` 文件，并在输入以下命令后，[**查看本教程 5.2 以配置本地端口**](https://github.com/InternLM/tutorial/blob/main/helloworld/hello_world.md#52-%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E7%AB%AF%E5%8F%A3)，将端口映射到本地。在本地浏览器中输入 `http://127.0.0.1:6006`。
