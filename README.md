@@ -151,16 +151,14 @@ curl http://localhost:8000/v1/chat/completions \
 
 Find more details in the [vLLM documentation](https://docs.vllm.ai/en/latest/index.html)
 
-### Convert  lmdeploy TurboMind
+## Used local trained model
 
-```bash
-# Converting Model to TurboMind (FastTransformer Format)
-lmdeploy convert internlm-chat-7b /path/to/XiXiLM
-```
+### First: Convert  lmdeploy TurboMind
 
 Here, we will use our pre-trained model file and execute the conversion in the user's root directory, as shown below.
 
 ```bash
+# Converting Model to TurboMind (FastTransformer Format)
 lmdeploy convert internlm2-chat-7b /root/autodl-tmp/agri_intern/XiXiLM --tokenizer-path ./GouMang/tokenizer.json
 ```
 
@@ -171,13 +169,13 @@ This folder contains the necessary files for TurboMind and Triton "Model Inferen
 ![image/png](https://cdn-uploads.huggingface.co/production/uploads/658a3c4cbbb04840e3ce7e2c/CqdwhshIL8xxjog_WD_St.png)
 
 
-### Chat Locally
+### Second: Chat Locally
 
 ```bash
 lmdeploy chat turbomind ./workspace
 ```
 
-### TurboMind Inference + API Service
+### Third(Optional): TurboMind Inference + API Service
 
 In the previous section, we tried starting the Client directly using the command line. Now, we will attempt to use lmdeploy for service deployment.
 
@@ -189,13 +187,14 @@ First, start the service with the following command:
 ```bash
 # ApiServer+Turbomind   api_server => AsyncEngine => TurboMind
 lmdeploy serve api_server ./workspace \
-	--server_name 0.0.0.0 \
+	--server-name 0.0.0.0 \
 	--server-port 23333 \
-	--instance_num 64 \
 	--tp 1
 ```
 
-In the above parameters, `server_name` and `server_port` indicate the service address and port, respectively. The `tp` parameter, as mentioned earlier, stands for Tensor Parallelism. The remaining parameter, instance_num, represents the number of instances and can be understood as the batch size. After execution, it will appear as shown below.
+In the above parameters, `server_name` and `server_port` indicate the service address and port, respectively. The `tp` parameter, as mentioned earlier, stands for Tensor Parallelism. 
+
+After this, users can start the Web Service as described in [TurboMind Service as the Backend](#--turbomind-service-as-the-backend).
 
 ## Web Service Startup Method 1:
 
@@ -378,6 +377,51 @@ curl http://localhost:8000/v1/chat/completions \
 ```
 
 更多信息请查看 [vLLM 文档](https://docs.vllm.ai/en/latest/index.html)
+
+## 使用本地训练模型
+
+### 第一步：转换为 lmdeploy TurboMind 格式
+
+这里，我们将使用预训练的模型文件，并在用户的根目录下执行转换，如下所示。
+
+```bash
+# 将模型转换为 TurboMind (FastTransformer 格式)
+lmdeploy convert internlm2-chat-7b /root/autodl-tmp/agri_intern/XiXiLM --tokenizer-path ./GouMang/tokenizer.json
+```
+
+执行完毕后，当前目录下将生成一个 workspace 文件夹。
+这个文件夹包含 TurboMind 和 Triton “模型推理”所需的文件，如下所示：
+
+
+![image/png](https://cdn-uploads.huggingface.co/production/uploads/658a3c4cbbb04840e3ce7e2c/CqdwhshIL8xxjog_WD_St.png)
+
+
+### 第二步：本地聊天
+
+```bash
+lmdeploy chat turbomind ./workspace
+```
+
+### 第三步（可选）：TurboMind 推理 + API 服务
+
+在前一部分中，我们尝试通过命令行直接启动客户端。现在，我们将尝试使用 lmdeploy 进行服务部署。
+
+“模型推理/服务”目前提供两种服务部署方式：TurboMind 和 TritonServer。在这种情况下，服务器可以是 TurboMind 或 TritonServer，而 API 服务器可以提供外部 API 服务。我们推荐使用 TurboMind。
+
+首先，使用以下命令启动服务：
+
+```bash
+# ApiServer+Turbomind   api_server => AsyncEngine => TurboMind
+lmdeploy serve api_server ./workspace \
+	--server-name 0.0.0.0 \
+	--server-port 23333 \
+	--tp 1
+```
+
+在上述参数中，server_name 和 server_port 分别表示服务地址和端口。tp 参数如前所述代表 Tensor 并行性。
+
+之后，用户可以按照[TurboMind Service as the Backend](#--turbomind-service-as-the-backend) 中描述的启动 Web 服务。
+
 
 
 ## 网页服务启动方式1:
