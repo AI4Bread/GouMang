@@ -1,12 +1,9 @@
----
-pipeline_tag: text-generation
-license: other
----
+
 # XiXiLM 
 
 <div align="center">
 
-<!-- <img src="https://github.com/InternLM/InternLM/assets/22529082/b9788105-8892-4398-8b47-b513a292378e" width="200"/> -->
+<img src="https://raw.githubusercontent.com/AI4Bread/.github/main/goumang_logoall.png" width="600"/>
   <div>&nbsp;</div>
   <div align="center">
     <b><font size="5">XiXiLM</font></b>
